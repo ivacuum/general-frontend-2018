@@ -8,5 +8,6 @@
   }
 }
 
+.always-wide { @include always-wide; }
 .mobile-wide { @include mobile-wide; }
 .mobile-wide-sm { @include mobile-wide-sm; }

@@ -1,4 +1,3 @@
-@import "variables";
 @import "mixins";
 
 @import "backgrounds";
@@ -11,6 +10,8 @@
 
 @import "utilities";
 
-.is-desktop {
-  @import "tooltips";
+@if $enable-tooltips {
+  .is-desktop {
+    @import "tooltips";
+  }
 }
