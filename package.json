@@ -1,0 +1,14 @@
+{
+  "name": "vac-gfe",
+  "version": "1.0.0",
+  "description": "Generic front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergey Pankov",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.0.0-beta.3"
+  }
+}

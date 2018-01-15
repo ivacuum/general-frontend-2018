@@ -1,0 +1,10 @@
+.border-top { border-top: $border-width solid $border-color; }
+.border-right { border-right: $border-width solid $border-color; }
+.border-bottom { border-bottom: $border-width solid $border-color; }
+.border-left { border-left: $border-width solid $border-color; }
+
+.border-b125 { border-color: rgba($black, .125) !important; }
+.border-g200 { border-color: $gray-200 !important; }
+.border-g300 { border-color: $gray-300 !important; }
+.border-g400 { border-color: $gray-400 !important; }
+.border-g500 { border-color: $gray-500 !important; }

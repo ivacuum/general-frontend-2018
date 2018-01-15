@@ -1,0 +1,17 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .w#{$infix}-auto { width: auto !important; }
+    .w#{$infix}-100 { width: 100% !important; }
+  }
+}
+
+.mw-400 { max-width: 400px; }
+.mw-500 { max-width: 500px; }
+.mw-600 { max-width: 600px; }
+.mw-700 { max-width: 700px; }
+.mw-800 { max-width: 800px; }
+.mw-1000 { max-width: 1000px; }
+
+.size-32 { @include size(32px); }

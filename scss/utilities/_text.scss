@@ -1,0 +1,15 @@
+.f12 { font-size: 12px; }
+.f13 { font-size: 13px; }
+.f14 { font-size: 14px; }
+.f16 { font-size: 16px; }
+.f18 { font-size: 18px; }
+.f20 { font-size: 20px; }
+.f24 { font-size: 24px; }
+.f28 { font-size: 28px; }
+.f36 { font-size: 36px; }
+.f48 { font-size: 48px; }
+
+.font-small-caps { font-variant: small-caps; }
+.font-smooth { @include font-smoothing(); }
+
+.text-break-word { word-wrap: break-word; }

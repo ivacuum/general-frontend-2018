@@ -1,0 +1,12 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .mt#{$infix}--1 { margin-top: -#{map_get($spacers, 1)}; }
+    .mt#{$infix}--2 { margin-top: -#{map_get($spacers, 2)}; }
+    .mt#{$infix}--3 { margin-top: -#{map_get($spacers, 3)}; }
+  }
+}
+
+.mobile-wide { @include mobile-wide; }
+.mobile-wide-sm { @include mobile-wide-sm; }
