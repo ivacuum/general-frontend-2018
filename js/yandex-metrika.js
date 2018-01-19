@@ -21,11 +21,13 @@ export default class {
     let params = {}
 
     if (window.matchMedia('(min-width: 1200px)').matches) {
-      params.screen_width = '1200+'
+      params.screen_width = '1200+' // xl
     } else if (window.matchMedia('(min-width: 992px)').matches) {
-      params.screen_width = '992+'
+      params.screen_width = '992+' // lg
     } else if (window.matchMedia('(min-width: 768px)').matches) {
-      params.screen_width = '768+'
+      params.screen_width = '768+' // md
+    } else if (window.matchMedia('(min-width: 576px)').matches) {
+      params.screen_width = '576+' // sm
     } else if (window.matchMedia('(min-width: 480px)').matches) {
       params.screen_width = '480+'
     } else {
