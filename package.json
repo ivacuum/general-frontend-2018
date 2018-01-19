@@ -1,6 +1,6 @@
 {
   "name": "vac-gfe",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generic front-end",
   "main": "index.js",
   "scripts": {
