@@ -1,10 +1,10 @@
 .navbar-border {
-  border-bottom: .125rem solid $gray-200;
+  border-bottom: $navbar-border-width solid $navbar-border-color;
 
   @include media-breakpoint-up(md) {
     .active {
-      border-bottom: .125rem solid #51a7f9;
-      margin-bottom: -.125rem;
+      border-bottom: $navbar-border-width solid $navbar-active-border-color;
+      margin-bottom: -$navbar-border-width;
     }
   }
 }
