@@ -35,6 +35,16 @@ $font-sizes: map-merge((
   72: 72px,
 ), $font-sizes);
 
+$flex-grow-values: () !default;
+$flex-grow-values: map-merge((
+  1: 1,
+), $flex-grow-values);
+
+$flex-shrink-values: () !default;
+$flex-shrink-values: map-merge((
+  0: 0,
+), $flex-shrink-values);
+
 $sizes: (
   14: percentage(1 / 7),
   16: percentage(1 / 6),
