@@ -74,3 +74,8 @@
 
   tfoot { border-top: $border-width solid $table-border-color; }
 }
+
+.table-stats-align-top {
+  td,
+  th { vertical-align: top; }
+}
