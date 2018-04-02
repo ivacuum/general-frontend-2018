@@ -1,6 +1,8 @@
 .anchor-sticky {
-  display: block;
-  position: relative;
-  top: $anchor-sticky-top;
-  visibility: hidden;
+  @include media-breakpoint-up(md) {
+    display: block;
+    position: relative;
+    top: $anchor-sticky-top;
+    visibility: hidden;
+  }
 }
