@@ -4,5 +4,6 @@
 
 .font-small-caps { font-variant: small-caps; }
 .font-smooth { @include font-smoothing(); }
+.outline-0 { outline: 0; }
 .pre-line { white-space: pre-line; }
 .text-break-word { word-wrap: break-word; }
