@@ -3,15 +3,18 @@ $enable-tooltips: true !default;
 $yiq-contrasted-threshold: 170 !default;
 
 $background-colors: () !default;
-$background-colors: map-merge((
-  "vk": #527397,
-  "github": #333,
-  "google": #d94435,
-  "yandex": #ff0000,
-  "twitter": #31adf4,
-  "facebook": #304591,
-  "odnoklassniki": #f2812e,
-), $background-colors);
+$background-colors: map-merge(
+  (
+    "vk": #527397,
+    "github": #333,
+    "google": #d94435,
+    "yandex": #ff0000,
+    "twitter": #31adf4,
+    "facebook": #304591,
+    "odnoklassniki": #f2812e,
+  ),
+  $background-colors
+);
 
 $container-max-widths: (
   sm: 540px,
@@ -21,29 +24,34 @@ $container-max-widths: (
 ) !default;
 
 $font-sizes: () !default;
-$font-sizes: map-merge((
-  12: 12px,
-  13: 13px,
-  14: 14px,
-  16: 16px,
-  18: 18px,
-  20: 20px,
-  24: 24px,
-  28: 28px,
-  36: 36px,
-  48: 48px,
-  72: 72px,
-), $font-sizes);
+$font-sizes: map-merge(
+  (
+    12: 12px,
+    13: 13px,
+    14: 14px,
+    16: 16px,
+    18: 18px,
+    20: 20px,
+    24: 24px,
+    28: 28px,
+    36: 36px,
+    48: 48px,
+    72: 72px,
+  ),
+  $font-sizes
+);
 
 $flex-grow-values: () !default;
-$flex-grow-values: map-merge((
-  1: 1,
-), $flex-grow-values);
+$flex-grow-values: map-merge(
+  (),
+  $flex-grow-values
+);
 
 $flex-shrink-values: () !default;
-$flex-shrink-values: map-merge((
-  0: 0,
-), $flex-shrink-values);
+$flex-shrink-values: map-merge(
+  (),
+  $flex-shrink-values
+);
 
 $sizes: (
   14: percentage(1 / 7),
