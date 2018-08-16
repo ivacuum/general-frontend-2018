@@ -70,4 +70,10 @@ export default class {
 
     this.metrika.params(params)
   }
+
+  vueHit(url = null) {
+    if (!this.metrika) return
+
+    this.metrika.hit(url || window.location.href, { params: { vue: 1 } })
+  }
 }
