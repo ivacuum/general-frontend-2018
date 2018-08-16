@@ -3,14 +3,14 @@ const defaults = {
   threshold: 0,
 
   callback(el) {},
-  fallback(el) {}
+  fallback(el) {},
 }
 
 /**
  * @param {Function} callback
  */
 const onIntersection = callback => (entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       observer.unobserve(entry.target)
 
@@ -20,19 +20,19 @@ const onIntersection = callback => (entries, observer) => {
 }
 
 export default function (selector = '.js-intersection-observer', options = {}) {
-  const {rootMargin, threshold, callback, fallback} = Object.assign(defaults, options)
+  const { rootMargin, threshold, callback, fallback } = Object.assign(defaults, options)
   let observer
 
   if (window.IntersectionObserver) {
     observer = new IntersectionObserver(onIntersection(callback), {
       rootMargin,
-      threshold
+      threshold,
     })
   }
 
   return {
     observe() {
-      document.querySelectorAll(selector).forEach(el => {
+      document.querySelectorAll(selector).forEach((el) => {
         if (observer) {
           observer.observe(el)
           return
@@ -40,6 +40,6 @@ export default function (selector = '.js-intersection-observer', options = {}) {
 
         fallback(el)
       })
-    }
+    },
   }
 }

@@ -18,7 +18,7 @@ export default class {
   }
 
   getParams() {
-    let params = {}
+    const params = {}
 
     if (window.matchMedia('(min-width: 1200px)').matches) {
       params.screen_width = '1200+' // xl
@@ -34,7 +34,7 @@ export default class {
       params.screen_width = '<480'
     }
 
-    params.registered_user = window['AppOptions'].loggedIn
+    params.registered_user = window.AppOptions.loggedIn
 
     return params
   }
@@ -52,7 +52,7 @@ export default class {
       return
     }
 
-    this.metrika.hit(window.location.href, { params: { pjax: 1 }})
+    this.metrika.hit(window.location.href, { params: { pjax: 1 } })
   }
 
   userParams(params) {

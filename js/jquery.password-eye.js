@@ -1,9 +1,9 @@
 // Возможность посмотреть пароль
-$(document).on('click', '.js-password-eye', function (e) {
+$(document).on('click', '.js-password-eye', function jsPasswordEye(e) {
   e.preventDefault()
 
-  let state = this.dataset.state || 'password'
-  let $input = $(this).siblings('.form-control')
+  const state = this.dataset.state || 'password'
+  const $input = $(this).siblings('.form-control')
 
   if (state === 'password') {
     $input.attr('type', 'text')

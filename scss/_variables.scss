@@ -5,16 +5,16 @@ $yiq-contrasted-threshold: 170 !default;
 $background-colors: () !default;
 $background-colors: map-merge(
   (
-    "vk": #527397,
-    "viber": #7d3daf,
-    "github": #333,
-    "google": #d94435,
-    "yandex": #ff0000,
-    "twitter": #31adf4,
-    "facebook": #304591,
-    "telegram": #2994ca,
-    "whatsapp": #54b848,
-    "odnoklassniki": #f2812e,
+    'vk': #527397,
+    'viber': #7d3daf,
+    'github': #333,
+    'google': #d94435,
+    'yandex': #ff0000,
+    'twitter': #31adf4,
+    'facebook': #304591,
+    'telegram': #2994ca,
+    'whatsapp': #54b848,
+    'odnoklassniki': #f2812e,
   ),
   $background-colors
 );
@@ -23,7 +23,7 @@ $container-max-widths: (
   sm: 540px,
   md: 750px,
   lg: 970px,
-  xl: 1170px
+  xl: 1170px,
 ) !default;
 
 $font-sizes: () !default;
@@ -60,7 +60,7 @@ $sizes: (
   14: percentage(1 / 7),
   16: percentage(1 / 6),
   20: percentage(1 / 5),
-  33: percentage(1 / 3)
+  33: percentage(1 / 3),
 ) !default;
 
 // Components

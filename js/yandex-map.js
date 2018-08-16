@@ -12,18 +12,22 @@ export default class {
     return this.placemark(this.map.getCenter(), properties, options)
   }
 
-  create(el, lat, lon, zoom = 10, scroll_zoom = false) {
+  create(el, lat, lon, zoom = 10, scrollZoom = false) {
     return this.load().then(() => {
-      this.map = new this.ym.Map(el, {
-        center: [lat, lon],
-        zoom: zoom,
-        controls: ['zoomControl', 'fullscreenControl'],
-      }, {
-        suppressMapOpenBlock: true,
-        yandexMapDisablePoiInteractivity: true,
-      })
+      this.map = new this.ym.Map(
+        el,
+        {
+          center: [lat, lon],
+          zoom,
+          controls: ['zoomControl', 'fullscreenControl'],
+        },
+        {
+          suppressMapOpenBlock: true,
+          yandexMapDisablePoiInteractivity: true,
+        },
+      )
 
-      if (scroll_zoom === false) {
+      if (scrollZoom === false) {
         this.map.behaviors.disable('scrollZoom')
       }
     })
@@ -31,14 +35,18 @@ export default class {
 
   createByBounds(el, bounds) {
     return this.load().then(() => {
-      this.map = new this.ym.Map(el, {
-        bounds: bounds,
-        controls: ['zoomControl', 'fullscreenControl'],
-      }, {
-        suppressMapOpenBlock: true,
-        restrictMapArea: false,
-        yandexMapDisablePoiInteractivity: true,
-      })
+      this.map = new this.ym.Map(
+        el,
+        {
+          bounds,
+          controls: ['zoomControl', 'fullscreenControl'],
+        },
+        {
+          suppressMapOpenBlock: true,
+          restrictMapArea: false,
+          yandexMapDisablePoiInteractivity: true,
+        },
+      )
 
       this.map.behaviors.disable('scrollZoom')
     })
@@ -51,9 +59,11 @@ export default class {
         return
       }
 
-      this.appendJsToHead(`https://api-maps.yandex.ru/${this.api_version}/?lang=${this.locale}&onload=${this.onload}&ns=`)
+      this.appendJsToHead(
+        `https://api-maps.yandex.ru/${this.api_version}/?lang=${this.locale}&onload=${this.onload}&ns=`,
+      )
 
-      let timer = window.setInterval(() => {
+      const timer = window.setInterval(() => {
         if (this.loaded) {
           window.clearInterval(timer)
           resolve()
@@ -77,14 +87,16 @@ export default class {
   }
 
   placemark(coords, properties = {}, options = {}) {
-    let point = new this.ym.Placemark(coords, properties, options)
+    const point = new this.ym.Placemark(coords, properties, options)
     this.map.geoObjects.add(point)
     return point
   }
 
   pointGeocodeOnDragEnd(point, callback) {
     point.events.add('dragend', () => {
-      this.ym.geocode(point.geometry.getCoordinates(), { results: 1 }).then(callback)
+      this.ym
+        .geocode(point.geometry.getCoordinates(), { results: 1 })
+        .then(callback)
     })
   }
 
@@ -98,7 +110,7 @@ export default class {
 
   // Вспомогательное
   appendJsToHead(src) {
-    let el = document.createElement('script')
+    const el = document.createElement('script')
     el.type = 'text/javascript'
     el.src = src
     el.async = true

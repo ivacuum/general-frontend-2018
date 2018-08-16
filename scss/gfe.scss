@@ -1,20 +1,20 @@
-@import "mixins";
+@import 'mixins';
 
-@import "anchors";
-@import "backgrounds";
-@import "buttons";
-@import "curtain";
-@import "details";
-@import "dropdowns";
-@import "forms";
-@import "nav";
-@import "navbar";
-@import "tables";
+@import 'anchors';
+@import 'backgrounds';
+@import 'buttons';
+@import 'curtain';
+@import 'details';
+@import 'dropdowns';
+@import 'forms';
+@import 'nav';
+@import 'navbar';
+@import 'tables';
 
-@import "utilities";
+@import 'utilities';
 
 @if $enable-tooltips {
   .is-desktop {
-    @import "tooltips";
+    @import 'tooltips';
   }
 }

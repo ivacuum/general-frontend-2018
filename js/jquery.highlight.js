@@ -1,3 +1,5 @@
-$(document).on('click', '.js-highlight', function () {
-  $(this).focus().select()
+$(document).on('click', '.js-highlight', function jsHighlight() {
+  $(this)
+    .focus()
+    .select()
 })

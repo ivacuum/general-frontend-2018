@@ -1,4 +1,4 @@
-@import "mixins/retina";
+@import 'mixins/retina';
 
 .tooltipped { position: relative; }
 
@@ -34,7 +34,7 @@
   height: 0;
   color: $tooltip-background-color;
   pointer-events: none;
-  content: "";
+  content: '';
   border: 5px solid transparent;
   opacity: 0;
 }

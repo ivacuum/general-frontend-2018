@@ -21,7 +21,7 @@
     &:last-child { margin-right: 0; }
 
     &:hover {
-      color: darken(theme-color("primary"), 15%);
+      color: darken(theme-color('primary'), 15%);
       background-color: transparent;
     }
 

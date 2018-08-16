@@ -1,5 +1,9 @@
 export default class {
-  constructor({ container = '#pjax_container', selector = '.js-pjax', timeout = 5000 } = {}) {
+  constructor({
+    container = '#pjax_container',
+    selector = '.js-pjax',
+    timeout = 5000,
+  } = {}) {
     this.container = container
     this.selector = selector
     this.timeout = timeout
@@ -8,12 +12,16 @@ export default class {
   }
 
   onComplete() {
-    $('.js-curtain').removeClass('curtain-opened').addClass('curtain-closed')
+    $('.js-curtain')
+      .removeClass('curtain-opened')
+      .addClass('curtain-closed')
   }
 
   onSend(e) {
     if (!$(e.relatedTarget).hasClass('js-pjax-no-dim')) {
-      $('.js-curtain').removeClass('curtain-closed').addClass('curtain-opened')
+      $('.js-curtain')
+        .removeClass('curtain-closed')
+        .addClass('curtain-opened')
     }
   }
 

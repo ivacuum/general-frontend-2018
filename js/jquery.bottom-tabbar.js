@@ -1,29 +1,29 @@
-let throttle = require('lodash/throttle')
+import throttle from 'lodash/throttle'
 
 if (window.matchMedia('(max-width: 768px)').matches) {
-  let last_offset = window.pageYOffset
-  let $tabbar = $('.bottom-tabbar-container')
-  const tabbar_height = $tabbar.height()
+  let lastOffset = window.pageYOffset
+  const $tabbar = $('.bottom-tabbar-container')
+  const tabbarHeight = $tabbar.height()
   const threshold = 77
 
-  $(window).on('scroll.js-bottom-tabbar-reveal', throttle(function () {
-    let offset = window.pageYOffset
-    const window_height = window.innerHeight
-    const doc_height = $(document).height()
+  $(window).on('scroll.js-bottom-tabbar-reveal', throttle(() => {
+    const offset = window.pageYOffset
+    const windowHeight = window.innerHeight
+    const docHeight = $(document).height()
 
     // Домотали до конца
-    if (offset + window_height >= doc_height - tabbar_height) {
+    if (offset + windowHeight >= docHeight - tabbarHeight) {
       $tabbar.addClass('revealed')
-      last_offset = offset
+      lastOffset = offset
       return
     }
 
     // Промотали мало
-    if (Math.abs(last_offset - offset) <= threshold) {
+    if (Math.abs(lastOffset - offset) <= threshold) {
       return
     }
 
-    if (offset > last_offset) {
+    if (offset > lastOffset) {
       // Промотали вниз достаточно для скрытия
       $tabbar.removeClass('revealed')
     } else {
@@ -31,6 +31,6 @@ if (window.matchMedia('(max-width: 768px)').matches) {
       $tabbar.addClass('revealed')
     }
 
-    last_offset = offset
+    lastOffset = offset
   }, 250))
 }
