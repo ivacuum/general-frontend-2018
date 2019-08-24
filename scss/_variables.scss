@@ -26,43 +26,6 @@ $container-max-widths: (
   xl: 1170px,
 ) !default;
 
-$font-sizes: () !default;
-$font-sizes: map-merge(
-  (
-    12: 12px,
-    13: 13px,
-    14: 14px,
-    16: 16px,
-    18: 18px,
-    20: 20px,
-    24: 24px,
-    28: 28px,
-    36: 36px,
-    48: 48px,
-    72: 72px,
-  ),
-  $font-sizes
-);
-
-$flex-grow-values: () !default;
-$flex-grow-values: map-merge(
-  (),
-  $flex-grow-values
-);
-
-$flex-shrink-values: () !default;
-$flex-shrink-values: map-merge(
-  (),
-  $flex-shrink-values
-);
-
-$sizes: (
-  14: percentage(1 / 7),
-  16: percentage(1 / 6),
-  20: percentage(1 / 5),
-  33: percentage(1 / 3),
-) !default;
-
 // Components
 $anchor-sticky-top: -2.25rem !default;
 
